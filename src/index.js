@@ -13,5 +13,12 @@ class Test extends React.Component {
 ReactDOM.render(<Test />, document.getElementById('root'))
 
 export default function setup() {
+    // Add some SEO tags
+    var m = document.createElement('meta'); 
+    m.name = 'description'; 
+    m.content = 'This is the SEO description'; 
+    document.head.appendChild(m);
+
+    // Render react beforehand
     ReactDOM.render(<Test />, document.getElementById('root'))
 }
