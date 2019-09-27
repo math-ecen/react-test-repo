@@ -1,9 +1,17 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import _ from 'lodash'
 
-export default function component() {
-    let meta = document.createElement('meta');
-    meta.name = "description";
-    meta.content = "This is a great SEO description";
-    document.getElementsByTagName('head')[0].appendChild(meta);
-    return "<p>Here's a paragraph</p>"
+class Test extends React.Component {
+    render(){
+        return (
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61TswYjYvJL._SX425_.jpg" />
+        )
+    }
+}
+
+ReactDOM.render(<Test />, document.getElementById('root'))
+
+export default function setup() {
+    ReactDOM.render(<Test />, document.getElementById('root'))
 }
